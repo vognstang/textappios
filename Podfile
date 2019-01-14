@@ -5,9 +5,9 @@ target 'textapp' do
   use_frameworks!
 
   # Pods for textapp
-  
-  pod 'appcenter', '~> 1.3.0'
 
+  pod 'AppCenter'
+  
   target 'textappTests' do
     inherit! :search_paths
     # Pods for testing
