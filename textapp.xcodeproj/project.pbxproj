@@ -10,6 +10,9 @@
 		1DB4A808FBD8F13B11044EF5 /* Pods_textappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48605994E0616F44075BC0E9 /* Pods_textappUITests.framework */; };
 		30DAB476DCAE4D236389EFE6 /* Pods_textapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFA24C060FD90D4FE23D339 /* Pods_textapp.framework */; };
 		5461CA7CF5EFA51BF60DC5CA /* Pods_textappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C5D7D54A39FFFD4606A2B0 /* Pods_textappTests.framework */; };
+		B87960AA21ECE2D20004D80B /* AppCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87960A921ECE2D20004D80B /* AppCenter.framework */; };
+		B87960AC21ECE2E30004D80B /* AppCenterAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87960AB21ECE2E30004D80B /* AppCenterAnalytics.framework */; };
+		B87960AE21ECE2F20004D80B /* AppCenterCrashes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87960AD21ECE2F20004D80B /* AppCenterCrashes.framework */; };
 		B8E1D6EE21EC9B6800A5F2AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1D6ED21EC9B6800A5F2AD /* AppDelegate.swift */; };
 		B8E1D6F021EC9B6800A5F2AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1D6EF21EC9B6800A5F2AD /* ViewController.swift */; };
 		B8E1D6F321EC9B6800A5F2AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8E1D6F121EC9B6800A5F2AD /* Main.storyboard */; };
@@ -45,6 +48,9 @@
 		48605994E0616F44075BC0E9 /* Pods_textappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_textappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FBB955D0F535E949F99EEC /* Pods-textappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-textappTests/Pods-textappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A249C414BFD01DEE3A4A8B14 /* Pods-textapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-textapp/Pods-textapp.release.xcconfig"; sourceTree = "<group>"; };
+		B87960A921ECE2D20004D80B /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = "Pods/AppCenter/AppCenter-SDK-Apple/iOS/AppCenter.framework"; sourceTree = "<group>"; };
+		B87960AB21ECE2E30004D80B /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterAnalytics.framework; path = "Pods/AppCenter/AppCenter-SDK-Apple/iOS/AppCenterAnalytics.framework"; sourceTree = "<group>"; };
+		B87960AD21ECE2F20004D80B /* AppCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterCrashes.framework; path = "Pods/AppCenter/AppCenter-SDK-Apple/iOS/AppCenterCrashes.framework"; sourceTree = "<group>"; };
 		B8E1D6EA21EC9B6800A5F2AD /* textapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E1D6ED21EC9B6800A5F2AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8E1D6EF21EC9B6800A5F2AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87960AE21ECE2F20004D80B /* AppCenterCrashes.framework in Frameworks */,
+				B87960AC21ECE2E30004D80B /* AppCenterAnalytics.framework in Frameworks */,
+				B87960AA21ECE2D20004D80B /* AppCenter.framework in Frameworks */,
 				30DAB476DCAE4D236389EFE6 /* Pods_textapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +101,9 @@
 		64E182D595DF271FFC0F1948 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B87960AD21ECE2F20004D80B /* AppCenterCrashes.framework */,
+				B87960AB21ECE2E30004D80B /* AppCenterAnalytics.framework */,
+				B87960A921ECE2D20004D80B /* AppCenter.framework */,
 				1EFA24C060FD90D4FE23D339 /* Pods_textapp.framework */,
 				06C5D7D54A39FFFD4606A2B0 /* Pods_textappTests.framework */,
 				48605994E0616F44075BC0E9 /* Pods_textappUITests.framework */,
@@ -547,7 +559,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26WN2TTLTA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/AppCenter/AppCenter-SDK-Apple/iOS",
+				);
 				INFOPLIST_FILE = textapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,7 +572,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ByteIT.textapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -566,7 +583,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26WN2TTLTA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/AppCenter/AppCenter-SDK-Apple/iOS",
+				);
 				INFOPLIST_FILE = textapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,7 +596,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ByteIT.textapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
